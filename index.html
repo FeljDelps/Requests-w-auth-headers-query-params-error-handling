@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Gibhub Repositories</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+    <link rel='stylesheet', type='text/css' href='main.css'>
+</head>
+<body>
+    <div class='container'>
+        <h1> Repo List</h1>
+        <form id='js-form'>
+            <label for='search-handle'>Github Handle</label>
+            <input type='text' id='js-submission' name="search-handle">
+            <input type='submit'>
+        </form>
+        <section id='js-results' class='results'>
+            <ul id='results-list' class='list'></ul>
+        </section>
+        <p id='js-error-message'></p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='index.js'></script>
+</body>
+</html>
