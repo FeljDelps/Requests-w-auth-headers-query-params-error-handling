@@ -6,6 +6,7 @@ function displayResults(jsonResponse){
      <h3><a href= '${jsonResponse[i].html_url}'>${jsonResponse[i].name}</a></h3>
      </li>`
      );};
+     $('#results-list').removeClass('.hidden');
 };
 
 
@@ -27,7 +28,6 @@ function getRepos(githubHandle){
         $('#js-error-message').text(`Something went wrong`);
         console.log(err.message)
     })
-
 }
 
 
@@ -35,6 +35,7 @@ function watchform(){
     $('#js-form').submit(event => {
         event.preventDefault();
         console.log('watchForm ran');
+        $('#results-list').empty().addClass('.hidden');
         let userHandle = $('#js-submission').val();
         console.log(userHandle);
         getRepos(userHandle);
